@@ -25,7 +25,7 @@ locals {
   }
 }
 module "lxc_container" {
-  source = "modules/lxc_container"
+  source = "./modules/lxc_container"
 
   for_each = local.lxc
 
