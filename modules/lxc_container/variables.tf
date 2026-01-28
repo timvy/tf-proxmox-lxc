@@ -40,6 +40,7 @@ variable "config" {
     size_data       = optional(string, "10G")
     size_logs       = optional(string, "10G")
 
+    splunk_inputs_monitor_enable = optional(bool, true)
     splunk_inputs_monitor_logfile = optional(map(object({
       sourcetype = optional(string, "syslog")
       index      = optional(string, "syslog")
@@ -77,12 +78,6 @@ variable "zfs_binds" {
 variable "secrets" {
 
   default = null
-}
-
-variable "splunk_inputs_monitor_enable" {
-  type        = bool
-  default     = true
-  description = "Enable Splunk inputs monitor for the LXC container"
 }
 
 variable "splunk_inputs_monitor_syslog" {
