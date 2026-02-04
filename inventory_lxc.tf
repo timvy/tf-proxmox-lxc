@@ -191,10 +191,10 @@ locals {
         splunk_inputs_monitor_enable = false
       }
     }
-    "lxc-ntfy" = {
+    "ntfy" = {
       config = {
-        hostname = "lxc-ntfy"
-        distro   = "debian12"
+        hostname = "ntfy"
+        distro   = "debian"
         tags     = "ntfy;ssh;tailscale"
         memory   = "4096"
         nesting  = true
